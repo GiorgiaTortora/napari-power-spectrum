@@ -1,0 +1,21 @@
+name: napari-power-spectrum
+display_name: Power Spectrum
+contributions:
+  commands: 
+    - id: napari-power-spectrum.make_qwidget
+      python_name: napari_power_spectrum._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: napari-power-spectrum.make_magic_widget
+      python_name: napari_power_spectrum._widget:example_magic_widget
+      title: Make example magic widget
+    - id: napari-power-spectrum.make_func_widget
+      python_name: napari_power_spectrum._widget:example_function_widget
+      title: Make example function widget   
+  widgets:
+    - command: napari-power-spectrum.make_qwidget
+      display_name: Example QWidget
+    - command: napari-power-spectrum.make_magic_widget
+      display_name: Example Magic Widget
+    - command: napari-power-spectrum.make_func_widget
+      autogenerate: true
+      display_name: Example Function Widget 

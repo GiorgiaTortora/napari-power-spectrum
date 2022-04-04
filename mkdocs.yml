@@ -1,0 +1,11 @@
+site_name: napari-power-spectrum
+site_description: A simple plugin to get the power spectrum of frames of a stack image
+site_author: Giorgia Tortora
+
+theme: readthedocs
+
+
+repo_url: https://github.com/GiorgiaTortora/napari-power-spectrum
+
+pages:
+- Home: index.md
