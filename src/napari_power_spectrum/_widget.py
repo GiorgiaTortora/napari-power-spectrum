@@ -22,7 +22,7 @@ def calculate_spectrum(image: Image,
         im_name = f'Spectrum {image.name} frame_{current_step[0]}'
         # print('Power Spectrum of frame', current_step[0])
         
-    return Image(ps, name = im_name)
+    # return Image(ps, name = im_name)
 
 # if __name__ == '__main__':
         
