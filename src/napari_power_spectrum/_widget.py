@@ -3,12 +3,13 @@ import numpy as np
 from numpy.fft import ifft2, fft2, fftshift 
 from magicgui import magicgui
 import napari
-from napari.layers import Image, Points, Labels
+from napari.layers import Image
 
 # @magicgui(call_button = "Calculate Power Spectrum")
 @magic_factory(call_button = "Calculate Power Spectrum")
 def calculate_spectrum(image: Image,
                        entire_stack: bool = False)->Image:
+    viewer = napari.Viewer()
     stack = image.data
     current_step = viewer.dims.current_step
     epsilon = 1e-6
@@ -23,9 +24,9 @@ def calculate_spectrum(image: Image,
         
     return Image(ps, name = im_name)
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
         
-    viewer = napari.Viewer()
-    viewer.window.add_dock_widget(calculate_spectrum, name = 'Power Spectrum',
-                                      area='right')
-    napari.run() 
+#     viewer = napari.Viewer()
+#     viewer.window.add_dock_widget(calculate_spectrum, name = 'Power Spectrum',
+#                                   area='right')
+#     napari.run() 
