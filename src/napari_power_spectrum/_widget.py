@@ -17,6 +17,5 @@ def calculate_spectrum(viewer: "napari.Viewer", image: Image,
         im = stack[current_step[0:-2]]
         ps = np.log((np.abs(fftshift(fft2(im))))**2+epsilon)
         im_name = f'Spectrum {image.name} frame_{current_step[0]}'
-        # print('Power Spectrum of frame', current_step[0])
         
     return Image(ps, name = im_name)
