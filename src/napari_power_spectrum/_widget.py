@@ -2,10 +2,11 @@ from magicgui import magic_factory
 import numpy as np
 from numpy.fft import ifft2, fft2, fftshift
 import napari
+from napari import Viewer
 from napari.layers import Image
 
 @magic_factory(call_button = "Calculate Power Spectrum")
-def calculate_spectrum(viewer: "napari.Viewer", image: Image,
+def calculate_spectrum(viewer: Viewer, image: Image,
                        entire_stack: bool = False)->Image:
     stack = image.data
     current_step = viewer.dims.current_step
