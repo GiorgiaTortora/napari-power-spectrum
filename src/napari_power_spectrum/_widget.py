@@ -1,3 +1,12 @@
+""" Calculate the power spectrum.
+
+Parameters
+----------
+image: napari.layers.Image
+    The image to be analyzed.
+entire_stack: bool
+    If you want the power spectrum of all frames.
+"""
 from magicgui import magic_factory
 import numpy as np
 from numpy.fft import ifft2, fft2, fftshift
